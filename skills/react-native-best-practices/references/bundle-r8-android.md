@@ -46,24 +46,27 @@ android {
 }
 ```
 
-### 3. Configure ProGuard Rules
+### 3. Configure ProGuard Rules (If Needed)
 
-Edit `android/app/proguard-rules.pro`:
+Edit `android/app/proguard-rules.pro`. React Native defaults are usually sufficient—only add rules when specific libraries break after enabling R8.
+
+**Only add if using Firebase (`@react-native-firebase/*`):**
 
 ```proguard
-# React Native defaults are usually sufficient
-# Add rules for libraries that break
-
-# Example: Keep Firebase classes
 -keep class io.invertase.firebase.** { *; }
 -dontwarn io.invertase.firebase.**
+```
 
-# Example: Keep Retrofit
+**Only add if using Retrofit:**
+
+```proguard
 -keepattributes Signature
 -keepattributes *Annotation*
 -keep class retrofit2.** { *; }
 -dontwarn retrofit2.**
 ```
+
+See [Common Library Rules](#common-library-rules) and [Troubleshooting](#troubleshooting) for more examples.
 
 ### 4. Build and Test
 

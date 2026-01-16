@@ -10,6 +10,8 @@ Use Xcode Instruments and Android Studio Profiler to identify native performance
 - Battery drain concerns
 - Need CPU/memory breakdown by thread
 
+> **Note**: This skill involves interpreting visual profiler output (Xcode Instruments, Android Studio Profiler). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing the profiler UI manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## iOS Profiling with Xcode
 
 ### Quick Check: Debug Navigator
@@ -135,6 +137,12 @@ Export traces from Android Studio and analyze at [ui.perfetto.dev](https://ui.pe
 3. **Compare before/after**: Export traces for comparison
 4. **Filter by thread**: Focus on relevant work
 5. **Look for patterns**: Spikes correlating with interactions
+
+## Expo Notes
+
+- **Expo Go**: Cannot profile native code directly; JS profiling only
+- **Dev Client / Prebuild**: Full native profiling supported via Xcode/Android Studio
+- Run `npx expo prebuild` to generate native projects, then profile as bare React Native
 
 ## Common Findings
 

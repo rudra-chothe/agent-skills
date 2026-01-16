@@ -15,13 +15,16 @@ Identify unnecessary re-renders and performance bottlenecks in React Native apps
 - App running in development mode
 - React DevTools version 6.0.1+ for React Compiler support
 
+> **Note**: This skill involves interpreting visual profiler output (flame graphs, component highlighting). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing the profiler UI manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## Step-by-Step Instructions
 
 ### 1. Open React Native DevTools
 
 ```bash
-# Option A: Press 'j' in Metro terminal
+# Option A: Press 'j' in Metro terminal (works with both RN CLI and Expo)
 # Option B: Shake device / Cmd+D (iOS) / Cmd+M (Android) → "Open DevTools"
+# Expo: Also accessible via Expo DevTools in browser
 ```
 
 ### 2. Configure Profiler Settings

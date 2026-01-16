@@ -17,6 +17,8 @@ Set up performance markers to measure app startup time and track TTI improvement
 npm install react-native-performance
 ```
 
+> **Note**: This skill involves interpreting visual timeline diagrams and profiler output. AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing metrics manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## Understanding TTI
 
 **Time to Interactive**: Time from app icon tap to displaying usable content.

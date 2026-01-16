@@ -6,8 +6,8 @@ Enable dead code elimination to remove unused exports from your JavaScript bundl
 
 - Bundle includes unused library code
 - Want automatic barrel export optimization
-- Switching from Metro to Re.Pack
-- Using Expo SDK 52+
+- Using Expo SDK 52+ (recommended approach)
+- Project already uses Re.Pack (`@callstack/repack`)
 
 ## What is Tree Shaking?
 
@@ -69,17 +69,13 @@ npm install @rnx-kit/metro-serializer-esbuild
 
 Configure in metro.config.js.
 
-## Setup: Re.Pack (Recommended for Full Support)
+## Setup: Re.Pack (Only If Already Installed)
 
-### Initialize Re.Pack
+> **Important**: Re.Pack (`@callstack/repack`) is a custom bundler using Rspack/Webpack. Only apply these instructions if the project already has Re.Pack configured. Do not suggest migrating a codebase to Re.Pack—it's rarely necessary and requires significant setup. For most projects, use Expo SDK 52+ tree shaking or manual barrel export fixes instead.
 
-```bash
-npx @callstack/repack-init
-```
+**If project has `@callstack/repack` in dependencies:**
 
-Tree shaking enabled by default with Rspack.
-
-### Verify in Config
+Tree shaking is enabled by default with Rspack. Verify in config:
 
 ```javascript
 // rspack.config.js or webpack.config.js

@@ -9,6 +9,8 @@ Use source-map-explorer and Expo Atlas to visualize what's in your JavaScript bu
 - Investigating startup time issues
 - Before/after optimization comparison
 
+> **Note**: This skill involves interpreting visual treemap output (source-map-explorer, Expo Atlas). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing the visualization manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## Understanding Hermes Bytecode
 
 Modern React Native (0.70+) uses Hermes bytecode, not raw JavaScript:
@@ -24,6 +26,8 @@ Modern React Native (0.70+) uses Hermes bytecode, not raw JavaScript:
 
 ### Generate Bundle with Source Map
 
+**React Native CLI:**
+
 ```bash
 npx react-native bundle \
   --entry-file index.js \
@@ -32,6 +36,14 @@ npx react-native bundle \
   --sourcemap-output output.js.map \
   --dev false \
   --minify true
+```
+
+**Expo (SDK 51+):**
+
+```bash
+npx expo export --platform ios --source-maps --output-dir dist
+# Bundle at: dist/ios/_expo/static/js/ios/*.js
+# Source map at: dist/ios/_expo/static/js/ios/*.map
 ```
 
 ### Analyze
@@ -203,6 +215,8 @@ npx bundle-stats compare baseline-stats.json current-stats.json
 
 ## Quick Commands
 
+**React Native CLI:**
+
 ```bash
 # iOS bundle analysis
 npx react-native bundle \
@@ -223,6 +237,14 @@ npx react-native bundle \
   --dev false \
   --minify true && \
 npx source-map-explorer android-bundle.js --no-border-checks
+```
+
+**Expo:**
+
+```bash
+# Use Expo Atlas (recommended for Expo projects)
+EXPO_UNSTABLE_ATLAS=true npx expo export --platform ios
+npx expo-atlas
 ```
 
 ## Related Skills

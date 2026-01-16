@@ -176,3 +176,18 @@ Best results come from combining skills with your actual code:
 
 Migrate this component to use FlashList
 ```
+
+### 5. Pair with Complementary Skills
+
+For teams using both React Native and React web, consider combining with:
+
+- [Vercel React Best Practices](https://github.com/vercel-labs/agent-skills/tree/react-best-practices/skills/react-best-practices) - 40+ React/Next.js optimization rules
+
+Example setup in `.cursor/rules`:
+
+```
+For React Native: reference skills/react-native-best-practices/SKILL.md
+For React/Next.js web: reference skills/react-best-practices/SKILL.md
+```
+
+Both skill sets follow the agentskills.io specification and can be used together.

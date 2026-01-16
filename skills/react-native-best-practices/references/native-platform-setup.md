@@ -153,11 +153,23 @@ cd android && ./gradlew clean          # Clean build
 ./gradlew tasks                        # List available tasks
 ./gradlew assembleRelease              # Build release APK
 
-# React Native
+# React Native CLI
 npx react-native start                 # Start Metro
 npx react-native run-ios               # Run on iOS
 npx react-native run-android           # Run on Android
+
+# Expo
+npx expo start                         # Start Metro (Expo)
+npx expo run:ios                       # Run on iOS (dev client)
+npx expo run:android                   # Run on Android (dev client)
+npx expo prebuild                      # Generate native projects
 ```
+
+### Expo Notes
+
+- **Expo Go**: Limited native module support; use for JS-only development
+- **Dev Client**: Full native access; required for custom native code
+- **Prebuild**: Generates `ios/` and `android/` folders for native customization
 
 ## Troubleshooting
 

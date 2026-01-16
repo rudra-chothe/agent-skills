@@ -1,6 +1,15 @@
 ---
 name: react-native-best-practices
 description: React Native performance optimization guidelines from Callstack's Ultimate Guide. Use this skill when writing, reviewing, or debugging React Native code for performance issues. Triggers on tasks involving FPS optimization, TTI improvement, bundle size reduction, native module development, memory leaks, or animation performance.
+license: MIT
+metadata:
+  author: Callstack
+  tags:
+    - react-native
+    - expo
+    - performance
+    - optimization
+    - profiling
 ---
 
 # React Native Best Practices

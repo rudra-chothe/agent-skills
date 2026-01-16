@@ -107,6 +107,36 @@ Contributions welcome! Skills should be:
 - **Searchable**: Clear headings and keywords
 - **Complete**: Include code examples and common pitfalls
 
+## Roadmap / Work in Progress
+
+This is just the start! The following features are planned or in progress.
+
+### Visual Feedback Integration (Planned)
+
+Several skills involve interpreting visual profiler output (flame graphs, treemaps, memory snapshots). AI agents cannot yet process these autonomously.
+
+**Affected skills:**
+- `js-profile-react.md` - React DevTools flame graphs
+- `js-measure-fps.md` - FPS graphs and performance overlays
+- `native-profiling.md` - Xcode Instruments / Android Studio Profiler
+- `native-measure-tti.md` - TTI timeline visualization
+- `native-view-flattening.md` - View hierarchy inspection
+- `bundle-analyze-js.md` - Bundle treemap visualization
+- `bundle-analyze-app.md` - App size breakdown (Emerge Tools, Ruler)
+
+**Planned solution:** MCP (Model Context Protocol) integration for screenshot capture and visual analysis. Contributions welcome!
+
+### Complementary Skills
+
+For complete coverage, consider pairing with:
+- [Vercel React Best Practices](https://github.com/vercel-labs/agent-skills/tree/react-best-practices/skills/react-best-practices) - React/Next.js web optimization (40+ rules)
+
+### Future Work
+
+- [ ] MCP integration for visual profiler feedback
+- [ ] Additional skills for debugging, testing, and CI/CD
+- [ ] More code examples and interactive tutorials
+
 ---
 
 ## Made with ❤️ at Callstack

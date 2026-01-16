@@ -9,6 +9,8 @@ Understand and debug React Native's view flattening optimization.
 - Building native components that accept children
 - Understanding React Native rendering
 
+> **Note**: This skill involves interpreting visual view hierarchy tools (Xcode Debug View Hierarchy, Android Layout Inspector). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing the hierarchy manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## What is View Flattening?
 
 React Native's renderer automatically removes "layout-only" views that:

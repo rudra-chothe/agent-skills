@@ -9,6 +9,8 @@ Measure iOS and Android app download/install sizes using Ruler, App Store Connec
 - App approaching store limits
 - Comparing releases for size regression
 
+> **Note**: This skill involves interpreting visual size reports (Ruler, Emerge Tools X-Ray). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing the reports manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## Key Metrics
 
 | Metric | Description | User Impact |

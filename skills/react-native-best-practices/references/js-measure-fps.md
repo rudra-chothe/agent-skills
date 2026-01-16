@@ -14,6 +14,8 @@ Monitor and measure JavaScript frame rate to quantify app smoothness and identif
 - React Native app running on device/simulator
 - For Flashlight: Android device (iOS not supported)
 
+> **Note**: This skill involves interpreting visual output (FPS graphs, performance overlays). AI agents cannot yet process screenshots autonomously. Use this as a guide while reviewing metrics manually, or await MCP-based visual feedback integration (see roadmap).
+
 ## Step-by-Step Instructions
 
 ### Method 1: React Perf Monitor (Quick Check)
@@ -79,11 +81,18 @@ flashlight measure
 1. Open Dev Menu
 2. Settings > JS Dev Mode → **OFF**
 
-**iOS:**
+**iOS (React Native CLI):**
 ```bash
 # Run Metro in production mode
 npx react-native start --reset-cache
 # Then build release variant
+```
+
+**Expo:**
+```bash
+# Start Metro without dev mode
+npx expo start --no-dev --minify
+# For accurate measurements, use EAS Build for release testing
 ```
 
 ## Code Examples

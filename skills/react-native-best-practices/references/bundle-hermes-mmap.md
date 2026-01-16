@@ -7,6 +7,7 @@ Disable Android JS bundle compression to enable Hermes memory mapping for faster
 - Android app using Hermes
 - Want faster TTI (Time to Interactive)
 - Willing to trade install size for startup speed
+- React Native version is 0.78 or earlier, skip otherwise (see applicability)
 
 ## Background
 
@@ -87,11 +88,11 @@ cd android
 
 **Real example**: 75.9 MB install → 82 MB install, but 450ms faster startup.
 
-## When This Becomes Default
+## Applicability
 
-As of February 2025, React Native core team is including this behavior by default. Expected in React Native 0.79+.
+**React Native 0.78 and earlier**: Apply this optimization manually.
 
-**Check your version**: If RN 0.79+, this may already be applied.
+**React Native 0.79+**: Skip this—bundle compression is disabled by default.
 
 ## Verification
 
@@ -126,6 +127,10 @@ androidResources {
 - **Wrong config location**: Must be in `android` block
 - **Ignoring size increase**: Monitor user feedback on install size
 - **Already default**: Check if React Native version includes this
+
+## Expo Notes
+
+For Expo projects, run `npx expo prebuild` first to generate `android/` folder, then apply the `build.gradle` changes. Add `android/` to version control or use a [config plugin](https://docs.expo.dev/config-plugins/introduction/) for persistent changes.
 
 ## Should You Enable This?
 
